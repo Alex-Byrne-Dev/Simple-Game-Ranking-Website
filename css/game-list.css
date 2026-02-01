@@ -1,0 +1,227 @@
+#game-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game-card {
+    height: 300px;
+    width: 200px;
+    transition: 0.5s;
+    background-color: rgb(58, 58, 58);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    font-size: 0.9em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.game-card h3, .game-card p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: pre-wrap
+}
+
+.game-card img {
+    width: 100%;
+    min-width: 100%;
+    max-height: 30%;
+    object-fit: cover; /* https://stackoverflow.com/questions/11757537/css-image-size-how-to-fill-but-not-stretch */
+}
+
+.game-card:hover {
+    transition: 0.25s;
+    padding: 15px;
+    margin: 0px;
+    border: 1px white dashed;
+    box-shadow: 10px 10px 10px rgb(24, 24, 24); /* https://www.w3schools.com/css/css3_shadows_box.asp */
+}
+
+.game-card.deleting {
+    transition: 0.25s;
+    scale: 0;
+}
+
+.game-card .game-name {
+    text-align: center;
+}
+
+#game-list-header {
+    display: flex;
+}
+
+#game-list-title {
+    flex-grow: 1;
+}
+
+#add-game-button {
+    color: white;
+    background-color: rgb(69, 118, 255);
+    border: none;
+    font-weight: bold;
+    margin: 0;
+}
+
+#search-filter-label, #delete-disable-label {
+    margin: auto 10px;
+}
+
+#delete-disable-label {
+    margin-right: 5px !important;
+}
+
+.option-container {
+    display: flex;
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: dashed white 1px;
+}
+
+#add-game-button:hover {
+    background-color: rgb(50, 90, 201);
+}
+
+#add-game-button:active {
+    background-color: rgb(109, 134, 204);
+}
+
+.game-description {
+    margin: 0;
+    color: #ccc;
+    flex-grow: 1;
+}
+
+.delete-button {
+    border: none;
+    background-color: #f7f7f7;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.delete-button:hover {
+    background-color: #cf6b6b;
+    transition: 0.5s;
+    color: white;
+}
+
+.delete-button:active {
+    background-color: red;
+    color: white;
+}
+
+.game-rating {
+    text-align: center;
+    color: #ffffff; /* Default color if specific rating doesn't override it */
+    font-weight: bold;
+}
+
+.game-rating.rating-S {
+    color: #37e940;
+}
+
+.game-rating.rating-A {
+    color: #53d659;
+}
+
+.game-rating.rating-B {
+    color: #b8e047;
+}
+
+.game-rating.rating-C {
+    color: #eecd39;
+}
+
+.game-rating.rating-D {
+    color: #df742e;
+}
+
+.game-rating.rating-F {
+    color: #e43636;
+}
+
+
+/* Form styling */
+textarea {
+    max-width: 50vw;
+    max-height: 30vh;
+}
+
+label {
+    vertical-align: top;
+}
+
+.form-row {
+    display: flex;
+}
+
+.form-row>label {
+    flex: 0 1 35%;
+}
+
+.form-row>input,
+.form-row>textarea {
+    flex: 2 10;
+    margin-bottom: 10px;
+    background-color: #ffffff1e;
+    color: white;
+    padding: 5px 3px;
+    border: none;
+}
+
+select, option {
+    border: none;
+    background-color: #272727;
+    color: white;
+    text-align: right;
+}
+
+select {
+    margin: 10px 0;
+}
+
+#game-add-form {
+    min-width: min(95vw, 400px); /* https://developer.mozilla.org/en-US/docs/Web/CSS/min */
+}
+
+#game-add-dialog {
+    background-color: #272727;
+    color: white;
+}
+
+.hidden-card, .hidden-button {
+    display: none !important;
+}
+
+#end-of-form {
+    display: flex;
+    flex-direction: row;
+}
+
+#end-of-form button, #end-of-form input {
+    flex: 1 1 50%;
+    background-color: #ffffff1e;
+    color: white;
+    margin: 0 5px;
+    padding: 10px 0;
+    border: none;
+}
+
+#end-of-form button:hover,
+#end-of-form input:hover {
+    background-color: #ffffff59;
+}
+
+#end-of-form button:active,
+#end-of-form input:active {
+    background-color: #ffffff9a;
+}
+
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,75 @@
+body {
+    background-color: rgb(26, 26, 26);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Fonts are a default template provided by Visual Studio Code */
+}
+
+main {
+    flex-grow: 1;
+    padding: 8px;
+}
+
+#copyrightNotice {
+    text-align: center;
+}
+
+footer, header {
+    background-color: rgb(15, 15, 15);
+    padding: 0 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    padding-right: 50px;
+}
+
+header>nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+}
+
+nav a {
+    height: 100%;
+    color: white;
+    text-align: right;
+    display: flex;
+    flex-direction: column; /* CSS to centre a tag vertically (lines 41-43) sourced from: https://stackoverflow.com/questions/7812511/vertically-aligned-anchor-text */
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 20px;
+    background-color: rgb(15, 15, 15);;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    background-color: black;
+    transition: 0.5s;
+}
+
+main p {
+    font-size: 1.05em;
+}
+
+.page-header {
+    margin: 10px 0;
+}
+
+a {
+    color: white;
+}
+
+.easter-egg {
+    transition: 1s;
+    color: rgb(231, 179, 247) !important;
+}
+
+.no-easter-egg {
+    transition: 1s;
+    color: white;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Game List</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/game-list.css">
+</head>
+
+<body>
+    <header>
+        <h2>Game Tier List</h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="game-list.html">Game List</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main>
+        <div id="game-list-header" class="page-header">
+            <h2 id="game-list-title">Game List</h2>
+            <div class="option-container">
+                <label for="delete-disable" id="delete-disable-label">Hide Deleting Option:</label>
+                <input type="checkbox" id="delete-disable"></input>
+            </div>
+            <div class="option-container">
+                <label for="search-filter" id="search-filter-label">Filter By Rating:</label>
+                <select id="search-filter">
+                    <option value="All">Any</option>
+                    <option value="S">S</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <button id="add-game-button">Add Game</button>
+        </div>
+        <hr>
+        <div id="game-list-container"></div>
+        <dialog id="game-add-dialog">
+            <form id="game-add-form">
+                <div class="form-row">
+                    <label for="game-name-field">Game Name:</label>
+                    <input id="game-name-field" name="game-name" type="text" required maxlength="15"></input><br>
+                </div>
+                <div class="form-row">
+                    <label for="game-icon-field">Game Icon:</label>
+                    <input id="game-icon-field" name="game-icon" type="file" accept="image/png, image/jpeg"></input><br>
+                    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file -->
+                </div>
+                <div class="form-row">
+                    <label for="description-field">Description:</label>
+                    <textarea id="description-field" name="game-description" maxlength="50"></textarea><br>
+                </div>
+                <div class="form-row">
+                    <p>Tier:</p>
+                    <div class="radio-buttons">
+                        <label for="S">
+                            <input type="radio" name="tier-field" id="S" value="S" checked="checked">S</label>
+                        <label for="A">
+                            <input type="radio" name="tier-field" id="A" value="A">A</label>
+                        <label for="B">
+                            <input type="radio" name="tier-field" id="B" value="B">B</label>
+                        <label for="C">
+                            <input type="radio" name="tier-field" id="C" value="C">C</label>
+                        <label for="D">
+                            <input type="radio" name="tier-field" id="D" value="D">D</label>
+                        <label for="F">
+                            <input type="radio" name="tier-field" id="F" value="F">F</label> <!-- Used class notes for the radio buttons here -->
+                    </div>
+                </div>
+                <div id="end-of-form">
+                    <input id="game-submit-field" type="submit"></input>
+                    <input id="form-reset-field" type="reset" value="Reset & Cancel"></input>
+                </div>
+            </form>
+        </dialog>
+    </main>
+    <footer>
+        <p id="copyrightNotice">&copy; Alex Byrne</p>
+    </footer>
+    <script src="js/common.js"></script>
+    <script src="js/game-list.js"></script>
+</body>
+
+</html>
+
+<!-- Extra sources: Code wasn't used from them:
+https://stackoverflow.com/questions/1527721/using-label-for-on-radio-buttons
+https://code.visualstudio.com/docs/editing/intellisense
+https://stackoverflow.com/questions/72937903/visual-studio-code-html-template-with-exclamation-mark
+https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_radio
+https://forum.freecodecamp.org/t/label-tags-for-radio-buttons/494504
+-->
